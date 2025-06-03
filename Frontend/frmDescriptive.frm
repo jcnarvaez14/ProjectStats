@@ -44,7 +44,7 @@ Private Sub btnAnalysis_Click()
     Dim selectedColumns As Collection
     Set selectedColumns = New Collection
 
-    ' Leer los ComboBoxes uno por uno
+    ' Read comboboxes
     On Error Resume Next
     If Trim(Me.cmbY.Value) <> "" Then selectedColumns.Add Me.cmbY.Value
     If Trim(Me.cmbX1.Value) <> "" Then selectedColumns.Add Me.cmbX1.Value
@@ -57,13 +57,13 @@ Private Sub btnAnalysis_Click()
     If Trim(Me.cmbX8.Value) <> "" Then selectedColumns.Add Me.cmbX8.Value
     On Error GoTo 0
 
-    ' Si no hay columnas seleccionadas, cancelar
+    ' Cancel if there are not selected headers
     If selectedColumns.Count = 0 Then
-        MsgBox "Please select at least one variable (Y or X1–X8) before running the analysis.", vbExclamation
+        MsgBox "Please select at least one variable (Y or X1ï¿½X8) before running the analysis.", vbExclamation
         Exit Sub
     End If
 
-    ' Convertir a JSON manualmente
+    ' Manually convert to JSON
     Dim json As String
     Dim i As Long
     json = "["
@@ -73,7 +73,7 @@ Private Sub btnAnalysis_Click()
     Next i
     json = json & "]"
 
-    ' Guardar archivo JSON
+    ' Save JSON file
     Dim fso As Object, ts As Object
     Dim jsonPath As String
     jsonPath = "C:\Python\ProjectStats\data\selected_columns.json"
@@ -97,18 +97,18 @@ Private Sub RunPythonScript(command As String)
     Dim shell As Object
     Dim fullCommand As String
 
-    ' Ruta al ejecutable Python dentro del entorno virtual
+    ' Path to the Python executable file inside .venv
     pythonExePath = "C:\Python\ProjectStats\.venv\Scripts\python.exe"
     
-    ' Ruta al script principal con main()
+    ' Path to the main file 
     scriptPath = "C:\Python\ProjectStats\src\main.py"
     
-    ' Construir comando con argumento
+    ' Develop command with argument
     fullCommand = """" & pythonExePath & """ """ & scriptPath & """ " & command
 
-    ' Ejecutar el comando usando PowerShell o cmd (modo silencioso o ventana)
+    ' Execute the command using Powershell or cmd (silent mode or window)
     Set shell = CreateObject("WScript.Shell")
-    shell.Run fullCommand, 1, True  ' 1 = ventana normal, False = no esperar a que termine
+    shell.Run fullCommand, 1, True  ' 1 = normal window, False = do not wait until it's done
 End Sub
 Sub FillComboBoxesFromColumns()
     Dim fso As Object, ts As Object

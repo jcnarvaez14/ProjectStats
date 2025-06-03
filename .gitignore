@@ -25,3 +25,12 @@ Thumbs.db
 
 # VS Code config (optional)
 .vscode/
+
+#ruff cache 
+.ruff-cache
+
+#Temporal file that gets the data to execute step by step
+data/
+
+#Temporal files VBA
+~$*.*

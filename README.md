@@ -2,7 +2,7 @@
 
 ### A lightweight desktop app to automate statistical analysis from Excel using Python and VBA.
 
----
+
 
 ## Overview
 
@@ -10,7 +10,7 @@
 
 Built as a functional prototype for automating **data workflows**, this tool is modular, extendable, and ideal for repeated processes in finance, operations, and research.
 
----
+
 
 ## Workflow Overview
 
@@ -20,7 +20,7 @@ Built as a functional prototype for automating **data workflows**, this tool is 
 4. **Run Python logic in the background**  
 5. **Display results** back in Excel for review and export  
 
----
+
 
 ## Tech Stack
 
@@ -28,9 +28,9 @@ Built as a functional prototype for automating **data workflows**, this tool is 
 - **VBA for Excel** – user interface and automation layer  
 - **pandas, numpy** – data processing  
 - **openpyxl** – Excel file handling from Python  
-- *(planned)* **matplotlib** – for data visualizations  
+- **matplotlib** – for data visualizations  
 
----
+
 
 ## System Requirements
 
@@ -40,7 +40,7 @@ Built as a functional prototype for automating **data workflows**, this tool is 
 - **Macros enabled** in Excel (`.xlsm` support)  
 - Optional: Command line access (for debugging or development use)
 
----
+
 
 ## Getting Started
 
@@ -52,39 +52,57 @@ Built as a functional prototype for automating **data workflows**, this tool is 
    uv venv
    uv pip install -r pyproject.toml
 
----
+
 
 ## Features
 
-- 📊 One-click descriptive statistics from Excel  
-- 🧠 Key metrics: mean, median, standard deviation, IQR, min, max  
-- 🔁 Results displayed directly inside Excel  
-- 🧱 Modular backend, extendable for more advanced statistical analysis  
-- 💼 Built for business analysts, students, and data-savvy professionals
+- One-click descriptive statistics from Excel  
+- Key metrics: mean, median, standard deviation, IQR, min, max  
+- Results displayed directly inside Excel  
+- Modular backend, extendable for more advanced statistical analysis  
+- Built for business analysts, students, and data-savvy professionals
 
----
+
 
 ## Screenshots
 
-> *(Add images of your Excel interface, output, and button interactions here once available)*
+<p align="center">
+Launch the utility:<br/>
+<img src="https://i.imgur.com/EgUOLx8.png" alt="Launch Screenshot"/>
+</p>
 
----
+<p align="center">
+Read Data (xlx or csv files):<br/>
+<img src="https://i.imgur.com/TMLXVMJ.png" alt="Launch Screenshot"/>
+</p>
+
+<p align="center">
+Select the headers to be analized:<br/>
+<img src="https://i.imgur.com/TBKEBy2.png" alt="Launch Screenshot"/>
+</p>
+
+<p align="center">
+View the results (use Print to get pdf format):<br/>
+<img src="https://i.imgur.com/GR2ODX3.png" alt="Launch Screenshot"/>
+</p>
+
+
+
+
+
 
 ## Roadmap of new features
 
 - [ ] Integrate panel data regression analysis (fixed/random effects)
-- [ ] Add visualizations (boxplots, histograms)
 - [ ] Include a settings window for custom analysis modes
-- [ ] Build executable version (.exe) for non-Python users
-- [ ] Localize in Spanish and French
 
----
+
 
 ## Author
 
 **José C. Narvaez**  
 [LinkedIn](https://www.linkedin.com/in/jcnarvaez2/)  
-📧 jcnarvaezpro@gmail.com
+jcnarvaezpro@gmail.com
 
 ---
 

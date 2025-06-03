@@ -25,6 +25,7 @@ def main():
         run_print()
     else:
         logging.error(f"Unknown command: '{command}'. Available commands are: run_read, run_descriptive, run_display, run_print")
+    
 
 if __name__ == "__main__":
     main()
